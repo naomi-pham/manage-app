@@ -10,7 +10,7 @@ export default {
       },
       colors: {
         primary: {
-          brightRed: "#ff3333",
+          brightRed: "#ef4444",
           darkBlue: "#0d2857",
         },
         neutral: {
