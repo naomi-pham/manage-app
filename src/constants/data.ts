@@ -57,7 +57,7 @@ export const TestimonialData = [
     avatar: "/landing/avatar-ali.png",
     author: "Ali Bravo",
     content:
-      "We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused",
+      "We've been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused",
   },
   {
     id: 2,
@@ -101,13 +101,18 @@ export const FooterLinks = {
   right: [
     {
       id: 0,
-      label: "Home",
-      url: "/home",
+      label: "Careers",
+      url: "/careers",
     },
     {
       id: 1,
       label: "Pricing",
       url: "/pricing",
+    },
+    {
+      id: 2,
+      label: "Privacy Policy",
+      url: "/privacy-policy",
     },
   ],
 };

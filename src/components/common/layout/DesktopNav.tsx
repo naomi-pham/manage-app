@@ -1,11 +1,12 @@
-import { NavList } from "@/constants/data";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
+import { IconHamburger } from "../Icons";
+import { NavList } from "@/constants/data";
 
 const DesktopNav = () => {
   return (
-    <header className="container mx-auto mt-6 items-center flex max-w-7xl justify-between px-4 py-6">
+    <header className="container mx-auto mt-6 flex max-w-7xl items-center justify-between px-4 py-6">
       <Link href="/">
         <Image
           src="/landing/logo.svg"
@@ -16,7 +17,7 @@ const DesktopNav = () => {
         />
       </Link>
 
-      <nav>
+      <nav className="hidden lg:block">
         <ul className="inline-flex items-center gap-10">
           {NavList.map((item) => (
             <li key={item.id}>
@@ -26,7 +27,13 @@ const DesktopNav = () => {
         </ul>
       </nav>
 
-      <Button>Get started</Button>
+      <div className="hidden lg:block">
+        <Button>Get started</Button>
+      </div>
+
+      <i className="lg:hidden">
+        <IconHamburger />
+      </i>
     </header>
   );
 };
