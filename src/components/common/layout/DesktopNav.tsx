@@ -6,7 +6,7 @@ import { NavList } from "@/constants/data";
 
 const DesktopNav = () => {
   return (
-    <header className="container mx-auto mt-6 flex max-w-7xl items-center justify-between px-4 py-6">
+    <header className="container mx-auto mt-2 flex max-w-7xl items-center justify-between px-4 py-6">
       <Link href="/">
         <Image
           src="/landing/logo.svg"

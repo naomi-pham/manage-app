@@ -5,7 +5,7 @@ const ServiceCard = ({ item }: { item: IServiceCard }) => {
   return (
     <li>
       <div className="absolute right-0 flex w-[calc(100vw-16px)] items-center gap-4 rounded-l-full bg-neutral-paleRed md:relative md:bg-transparent md:w-auto">
-        <div className="flex min-w-[60px] items-center justify-center rounded-full bg-primary-brightRed/80 px-3 py-2 text-sm font-bold text-neutral-lightGray">
+        <div className="flex min-w-[60px] items-center justify-center rounded-full bg-primary-brightRed px-3 py-2 text-sm font-bold text-neutral-lightGray">
           0{item.id + 1}
         </div>
         <h5 className="py-1 font-bold text-neutral-darkBlue/80 md:text-lg line-clamp-1">

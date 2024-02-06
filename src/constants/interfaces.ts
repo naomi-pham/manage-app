@@ -10,3 +10,23 @@ export interface ITestimonialCard {
   content: string;
   avatar: string;
 }
+
+export interface IPricePerUser {
+  monthly?: number;
+  annually?: number;
+}
+
+export enum PRICING_TIER {
+  FREE = "Free",
+  STANDARD = "Standard",
+  PLUS = "Plus",
+}
+
+export interface IPricingCard {
+  id: number;
+  title: PRICING_TIER;
+  desc: string;
+  features: Array<string>;
+  pricePerUser?: IPricePerUser;
+  team?: string;
+}

@@ -11,7 +11,7 @@ const TestimonialCard = ({
 }) => {
   return (
     <li
-      className={`relative mt-20 min-w-[100%] rounded-sm bg-neutral-lightGray p-6 ${currentSlide === item.id ? "opacity-100 scale-125" : "opacity-70"}`}
+      className={`relative mt-20 min-w-[100%] rounded-sm bg-neutral-lightGray p-6 ${currentSlide === item.id ? "opacity-100 scale-125" : "opacity-60"}`}
     >
       <div className="absolute -top-10 left-1/2 -translate-x-1/2">
         <Image

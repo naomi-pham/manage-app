@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-darkBlue text-neutral-lightGray/90">
+    <footer className="mt-auto bg-neutral-darkBlue text-neutral-lightGray/90">
       <div className="container mx-auto flex max-w-7xl flex-col flex-wrap justify-between gap-16 px-6 py-16 md:flex-row">
         <div className="order-3 flex flex-col-reverse items-center gap-16 md:order-1 md:flex-col md:items-start md:gap-10 lg:justify-between">
           <Link href="/" className="">

@@ -24,12 +24,12 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="group relative w-full max-w-[calc(33%-2rem)]">
+    <div className="group relative w-full mt-10 my-6 max-w-[calc(33%-2rem)]">
       <div className="absolute -left-16 z-10 flex h-[calc(100%-4rem)] bottom-2 items-center justify-center">
         <button
           onClick={moveToLeft}
           type="button"
-          className="-rotate-180 opacity-0 text-neutral-darkBlue/30 opacity-0disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
+          className="-rotate-180 text-neutral-darkBlue/40 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
           disabled={currentSlide === 0}
         >
           <IconArrow size={40} />
@@ -39,7 +39,7 @@ const TestimonialCarousel = () => {
         <button
           onClick={moveToRight}
           type="button"
-          className="text-neutral-darkBlue/30 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
+          className="text-neutral-darkBlue/40 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
           disabled={currentSlide === totalSlides - 1}
         >
           <IconArrow size={40} />

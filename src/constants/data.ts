@@ -1,3 +1,5 @@
+import { PRICING_TIER } from "./interfaces";
+
 export const NavList = [
   {
     id: 0,
@@ -147,5 +149,51 @@ export const IconData = [
     url: "/",
     label: "instagram",
     icon: "landing/icon-instagram.svg",
+  },
+];
+
+export const PricingData = [
+  {
+    id: 0,
+    title: PRICING_TIER.FREE,
+    desc: "Free for everyone",
+    features: [
+      "Unlimited members",
+      "250 issues (+unlimited archived)",
+      "Import and export",
+      "All integrations, APIs, and webhooks",
+    ],
+  },
+  {
+    id: 1,
+    title: PRICING_TIER.STANDARD,
+    desc: "Free for everyone",
+    features: [
+      "Unlimited issues and file uploads",
+      "Guest accounts, private teams",
+      "Admin roles",
+    ],
+    pricePerUser: {
+      monthly: 8,
+      annually: 10,
+    },
+    team: "1-50",
+  },
+  {
+    id: 2,
+    title: PRICING_TIER.PLUS,
+    desc: "Free for everyone",
+    features: [
+      "SAML / Single Sign On",
+      "Advanced authentication controls",
+      "Advanced authentication controls",
+      "Manage insights",
+      "Manage asks",
+      "Priority support",
+    ],
+    pricePerUser: {
+      annually: 14,
+    },
+    team: "50+",
   },
 ];

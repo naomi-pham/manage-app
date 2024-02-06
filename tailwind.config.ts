@@ -10,12 +10,12 @@ export default {
       },
       colors: {
         primary: {
-          brightRed: "#ef4444",
+          brightRed: "#F3603C",
           darkBlue: "#0d2857",
         },
         neutral: {
           grayishBlue: "#4a7b99",
-          darkBlue: "#050c21",
+          darkBlue: "#192733",
           paleRed: "#fce8e8",
           lightGray: "#fafafa",
         },
