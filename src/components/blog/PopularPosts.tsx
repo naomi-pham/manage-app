@@ -1,29 +1,37 @@
-import { ICategory } from "@/constants/interfaces";
+import getCategoryBySlug from "@/lib/getCategoryBySlug";
 import Image from "next/image";
 import Link from "next/link";
 
-const PopularPosts = ({ category }: { category: ICategory }) => {
+const PopularPosts = async () => {
+  const popularCategory = await getCategoryBySlug("popular");
+
+  if (!popularCategory) return null;
+
   return (
     <div>
-      {category?.posts && category.posts.length > 0 ? (
-        <ul className="my-20 md:my-32 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {category.posts.map((post, index) => (
+      {popularCategory?.posts && popularCategory?.posts?.length > 0 ? (
+        <ul className="my-20 grid grid-cols-1 gap-6 md:my-32 md:grid-cols-3">
+          {popularCategory.posts.map((post, index) => (
             <li key={post.id} className="">
               <Link href="/blog">
-                <div className="flex gap-4 group">
-                  <Image
-                    src={post.coverPhoto.url}
-                    alt={post.title}
-                    width={125}
-                    height={95}
-                    className="group-hover:scale-110 transition min-w-[125px]"
-                  />
+                <div className="group flex gap-4">
+                  {post?.coverPhoto ? (
+                    <Image
+                      src={post.coverPhoto.url}
+                      alt={post.title}
+                      width={125}
+                      height={95}
+                      className="min-w-[125px] transition group-hover:scale-110"
+                    />
+                  ) : null}
                   <div className="flex flex-col gap-3">
-                    <p className="text-3xl font-bold opacity-20">0{index + 1}</p>
-                    <h4 className="line-clamp-1 text-2xl font-bold opacity-80 group-hover:text-primary-brightRed transition">
-                      {post.title}
+                    <p className="text-3xl font-bold opacity-20">
+                      0{index + 1}
+                    </p>
+                    <h4 className="line-clamp-1 text-2xl font-bold opacity-80 transition group-hover:text-primary-brightRed">
+                      {post?.title}
                     </h4>
-                    <p className="opacity-60">{post.description}</p>
+                    <p className="opacity-60">{post?.description}</p>
                   </div>
                 </div>
               </Link>

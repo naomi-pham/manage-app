@@ -12,7 +12,6 @@ const Contact = () => {
           accentBg
           hasButton
         />
-        {/* <Button intent="secondary">Get started</Button> */}
       </div>
     </div>
   );
