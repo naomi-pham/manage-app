@@ -23,8 +23,8 @@ export const NavList = [
   },
   {
     id: 4,
-    label: "Community",
-    url: "/community",
+    label: "Blog",
+    url: "/blog",
   },
 ];
 

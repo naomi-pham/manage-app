@@ -3,17 +3,17 @@ import PricingList from "@/components/pricing/PricingList";
 
 const PricingPage = () => {
   return (
-    <div className="min-h-screen">
-      <div className="mx-auto mt-20 flex max-w-xl flex-col justify-center gap-4 text-center">
+    <>
+      <div className="mx-auto mt-20 flex max-w-xl flex-col justify-center text-center">
         <h1 className="text-5xl font-bold">Pricing</h1>
-        <p className="text-xl">
+        <p className="text-xl mt-6">
           Use Manage for free with your whole team. Upgrade to enable unlimited
           issues, enhanced security controls, and additional features.
         </p>
       </div>
       <PricingList />
       <ContactSales />
-    </div>
+    </>
   );
 };
 

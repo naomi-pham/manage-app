@@ -30,3 +30,22 @@ export interface IPricingCard {
   pricePerUser?: IPricePerUser;
   team?: string;
 }
+
+export interface IPost {
+  id: string;
+  title: string;
+  slug: string;
+  description:  string;
+  content: {
+    html: string;
+  };
+  coverPhoto: {
+    url: string;
+  };
+}
+
+export interface ICategory {
+  title: string;
+  slug: string;
+  posts: IPost[];
+}

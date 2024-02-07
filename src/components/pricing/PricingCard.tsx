@@ -59,7 +59,7 @@ const PricingCard = ({ item }: { item: IPricingCard }) => {
                     <IconCheck size={16} />
                   </i>
                 </span>
-                {feature}
+                <p>{feature}</p> 
               </li>
             ))}
           </ul>

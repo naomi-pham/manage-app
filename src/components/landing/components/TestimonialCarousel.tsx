@@ -24,22 +24,22 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="group relative w-full mt-10 my-6 max-w-[calc(33%-2rem)]">
-      <div className="absolute -left-16 z-10 flex h-[calc(100%-4rem)] bottom-2 items-center justify-center">
+    <div className="group relative my-6 mt-10 max-w-[60%] md:max-w-[calc(40%-2rem)]">
+      <div className="absolute -left-16 bottom-2 z-10 flex h-[calc(100%-4rem)] items-center justify-center">
         <button
           onClick={moveToLeft}
           type="button"
-          className="-rotate-180 text-neutral-darkBlue/40 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
+          className="-rotate-180 text-primary-brightRed/60 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
           disabled={currentSlide === 0}
         >
           <IconArrow size={40} />
         </button>
       </div>
-      <div className="absolute -right-16 z-10 flex h-[calc(100%-4rem)] bottom-2 items-center justify-center">
+      <div className="absolute -right-16 bottom-2 z-10 flex h-[calc(100%-4rem)] items-center justify-center">
         <button
           onClick={moveToRight}
           type="button"
-          className="text-neutral-darkBlue/40 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
+          className="text-primary-brightRed/60 opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
           disabled={currentSlide === totalSlides - 1}
         >
           <IconArrow size={40} />
