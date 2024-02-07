@@ -7,7 +7,7 @@ import {
 import { HEADING } from "@/constants/interfaces";
 import { MotionConfig, motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Button from "../Button";
+import NavigateToPage from "../../common/NavigateToPage";
 
 const SectionTitle = ({
   heading,
@@ -70,9 +70,11 @@ const SectionTitle = ({
             variants={fadeUpVariants}
             transition={{ delay: 0.8 }}
           >
-            <Button intent={accentBg ? "secondary" : "primary"}>
-              Get started
-            </Button>
+            <NavigateToPage
+              url="/contact"
+              title="Get started"
+              intent={accentBg ? "secondary" : "primary"}
+            />
           </motion.div>
         ) : null}
       </div>

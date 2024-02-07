@@ -7,15 +7,16 @@ import Button from "./Button";
 const NavigateToPage = ({
   url,
   title,
-  ...rest
+  intent,
 }: {
   url: string;
   title: string;
+  intent?: "primary" | "secondary" | null | undefined;
 }) => {
   const navigation = useRouter();
 
   return (
-    <Button onClick={() => navigation.push(url)} {...rest}>
+    <Button onClick={() => navigation.push(url)} intent={intent ?? "primary"}>
       {title}
     </Button>
   );

@@ -1,5 +1,5 @@
 import { HEADING } from "@/constants/interfaces";
-import SectionTitle from "../common/animation/SectionTitle";
+import SectionTitle from "./components/SectionTitle";
 import ServiceList from "./components/ServiceList";
 
 const Services = () => {

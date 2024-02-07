@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
 import { IconHamburger } from "../Icons";
+import NavigateToPage from "../NavigateToPage";
 
 const DesktopNav = () => {
   return (
@@ -30,7 +31,7 @@ const DesktopNav = () => {
           </ul>
         </nav>
         <div className="hidden lg:block">
-          <Button>Get started</Button>
+          <NavigateToPage url="/contact" title="Get started" />
         </div>
         <i className="lg:hidden">
           <IconHamburger />

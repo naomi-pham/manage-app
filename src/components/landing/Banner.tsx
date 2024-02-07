@@ -1,6 +1,6 @@
 import { HEADING } from "@/constants/interfaces";
-import SectionImage from "../common/animation/SectionImage";
-import SectionTitle from "../common/animation/SectionTitle";
+import SectionImage from "./components/SectionImage";
+import SectionTitle from "./components/SectionTitle";
 
 const Banner = () => {
   return (
