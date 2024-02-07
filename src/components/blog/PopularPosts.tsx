@@ -6,7 +6,7 @@ const PopularPosts = ({ category }: { category: ICategory }) => {
   return (
     <div>
       {category?.posts && category.posts.length > 0 ? (
-        <ul className="my-32 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <ul className="my-20 md:my-32 grid grid-cols-1 gap-6 md:grid-cols-3">
           {category.posts.map((post, index) => (
             <li key={post.id} className="">
               <Link href="/blog">
@@ -16,7 +16,7 @@ const PopularPosts = ({ category }: { category: ICategory }) => {
                     alt={post.title}
                     width={125}
                     height={95}
-                    className="group-hover:scale-110 transition"
+                    className="group-hover:scale-110 transition min-w-[125px]"
                   />
                   <div className="flex flex-col gap-3">
                     <p className="text-3xl font-bold opacity-20">0{index + 1}</p>

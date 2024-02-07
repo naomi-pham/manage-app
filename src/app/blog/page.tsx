@@ -8,9 +8,9 @@ const BlogPage = async () => {
   const popularCategory = await getCategoryBySlug("popular");
 
   return (
-    <div className="container mx-auto max-w-7xl px-6 mt-16">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="col-span-2">
+    <div className="container mx-auto mt-16 max-w-7xl px-6">
+      <div className="grid grid-cols-1 gap-6 gap-y-16 lg:grid-cols-3">
+        <div className="lg:col-span-2">
           {latestCategory?.posts?.[0] ? (
             <FeaturedPost post={latestCategory.posts[0]} />
           ) : null}

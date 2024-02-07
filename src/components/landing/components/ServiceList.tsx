@@ -1,13 +1,29 @@
+"use client";
+
+import { staggerChild, staggerParent } from "@/constants/animations";
 import { ServiceData } from "@/constants/data";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import ServiceCard from "./ServiceCard";
 
 const ServiceList = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <ul className="flex flex-col gap-10 md:max-w-lg lg:max-w-2xl">
+    <motion.ul
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={staggerParent}
+      className="flex flex-col gap-10 md:max-w-lg lg:max-w-2xl"
+    >
       {ServiceData.map((item) => (
-        <ServiceCard key={item.id} item={item} />
+        <motion.li key={item.id} variants={staggerChild}>
+          <ServiceCard item={item} />
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 

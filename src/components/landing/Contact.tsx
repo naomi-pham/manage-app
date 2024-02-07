@@ -1,13 +1,18 @@
+import { HEADING } from "@/constants/interfaces";
 import Button from "../common/Button";
+import SectionTitle from "../common/animation/SectionTitle";
 
 const Contact = () => {
   return (
-    <div className="bg-primary-brightRed mt-44">
-      <div className="container mx-auto flex flex-col text-center gap-y-10 md:flex-row md:text-left max-w-7xl min-h-[250px] items-center justify-between px-4 py-16">
-        <h2 className="max-w-md text-4xl font-bold text-neutral-lightGray">
-          Simplify how your team works today.
-        </h2>
-        <Button intent="secondary">Get started</Button>
+    <div className="mt-44 bg-primary-brightRed">
+      <div className="container mx-auto flex min-h-[250px] max-w-7xl flex-col items-center justify-between gap-y-10 px-4 py-16 text-center md:flex-row md:text-left">
+        <SectionTitle
+          heading={HEADING.H2}
+          title="Simplify how your team works today."
+          accentBg
+          hasButton
+        />
+        {/* <Button intent="secondary">Get started</Button> */}
       </div>
     </div>
   );

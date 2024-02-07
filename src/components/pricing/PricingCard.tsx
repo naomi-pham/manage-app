@@ -17,7 +17,7 @@ const PricingCard = ({ item }: { item: IPricingCard }) => {
 
   return (
     <div
-      className={`flex flex-col justify-between rounded-xl ${item.title === PRICING_TIER.STANDARD ? "scale-110 bg-primary-brightRed text-zinc-100 shadow-xl" : "border border-zinc-400"} p-10`}
+      className={`flex flex-col max-w-md mx-auto justify-between rounded-xl ${item.title === PRICING_TIER.STANDARD ? "scale-110 bg-primary-brightRed text-zinc-100 shadow-xl" : "border border-zinc-400"} p-10`}
     >
       <div className="space-y-3 text-center">
         <p className="text-xl font-medium">{item.title}</p>
@@ -44,7 +44,7 @@ const PricingCard = ({ item }: { item: IPricingCard }) => {
         </p>
       ) : null}
 
-      <div className="mt-10 flex min-h-80 flex-col justify-between">
+      <div className="mt-10 flex gap-10 flex-col justify-between">
         <div className="self-center">
           {item.title !== PRICING_TIER.FREE ? (
             <p>Everything in {renderPreviousPricingTier()}, plus...</p>

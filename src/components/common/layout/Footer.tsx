@@ -26,7 +26,7 @@ const Footer = () => {
               <li key={item.id}>
                 <Link
                   href={item.url}
-                  className="hover:text-primary-brightRed/60"
+                  className="hover:text-neutral-brightRed"
                 >
                   {item.label}
                 </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
               <li key={item.id}>
                 <Link
                   href={item.url}
-                  className="hover:text-primary-brightRed/60"
+                  className="hover:text-neutral-brightRed"
                 >
                   {item.label}
                 </Link>

@@ -35,7 +35,7 @@ export interface IPost {
   id: string;
   title: string;
   slug: string;
-  description:  string;
+  description: string;
   content: {
     html: string;
   };
@@ -48,4 +48,9 @@ export interface ICategory {
   title: string;
   slug: string;
   posts: IPost[];
+}
+
+export enum HEADING {
+  H1,
+  H2,
 }
