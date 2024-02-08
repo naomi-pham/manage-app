@@ -55,17 +55,19 @@ export enum HEADING {
   H2,
 }
 
-export enum FORM_TYPES {
-  INPUT = "FormInput",
-  TEXT_AREA = "FormTextArea",
-}
+export const FIELD_TYPE = {
+  INPUT: "FormInput",
+  TEXT_AREA: "FormTextArea",
+};
+
+
 
 export interface FormInput {
   __typename: string;
   name: string;
   label: string;
   placeholder: string;
-  type: string;
+  type?: string;
   required: boolean;
 }
 
@@ -74,6 +76,7 @@ export interface FormTextArea {
   name: string;
   label: string;
   placeholder: string;
+  type?: string;
   required: boolean;
 }
 

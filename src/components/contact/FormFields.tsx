@@ -1,4 +1,4 @@
-import { FORM_TYPES } from "@/constants/interfaces";
+import { FIELD_TYPE } from "@/constants/interfaces";
 import getFormFields from "@/lib/getFormFields";
 import Button from "../common/Button";
 
@@ -13,7 +13,7 @@ const FormFields = async () => {
         ? form.fields.map((field) => (
             <div key={field.label} className="flex flex-col gap-1">
               <label>{field.label}</label>
-              {field.__typename === FORM_TYPES.INPUT ? (
+              {field.__typename === FIELD_TYPE.INPUT ? (
                 <input
                   type="text"
                   name={field.name}
