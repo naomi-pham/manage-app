@@ -1,7 +1,7 @@
 import MainLayout from "@/components/common/layout/MainLayout";
 import "@/styles/globals.css";
 
-import { Be_Vietnam_Pro, Inter } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],

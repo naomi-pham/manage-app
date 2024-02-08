@@ -1,5 +1,4 @@
 import { HEADING } from "@/constants/interfaces";
-import Button from "../common/Button";
 import SectionTitle from "./components/SectionTitle";
 
 const Contact = () => {

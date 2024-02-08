@@ -15,7 +15,7 @@ export default {
         },
         neutral: {
           grayishBlue: "#4a7b99",
-          brightRed: "#f47657",
+          brightRed: "#FEF4EA",
           darkBlue: "#192733",
           paleRed: "#fce8e8",
           lightGray: "#fafafa",

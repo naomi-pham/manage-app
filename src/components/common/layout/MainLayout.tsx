@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
-import DesktopNav from "./DesktopNav";
+import { ReactNode } from "react";
 import Footer from "./Footer";
+import Header from "./header";
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main>
-      <DesktopNav />
+      <Header />
       {children}
       <Footer />
     </main>

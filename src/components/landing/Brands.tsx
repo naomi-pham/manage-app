@@ -1,7 +1,10 @@
-import React from "react";
 
 const Brands = () => {
-  return <section className="h-32 mt-20 w-full bg-zinc-100">Brands</section>;
+  return (
+    <section className="mt-20 justify-center items-center py-10 w-full bg-zinc-100">
+      
+    </section>
+  );
 };
 
 export default Brands;

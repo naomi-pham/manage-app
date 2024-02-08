@@ -1,7 +1,6 @@
 import { IPricingCard, PRICING_TIER } from "@/constants/interfaces";
-import React from "react";
-import { IconCheck } from "../common/Icons";
 import Button from "../common/Button";
+import { IconCheck } from "../common/Icons";
 
 const PricingCard = ({ item }: { item: IPricingCard }) => {
   const renderPreviousPricingTier = () => {

@@ -1,17 +1,16 @@
 "use client";
 
 import { IconArrow } from "@/components/common/Icons";
-import { TestimonialData } from "@/constants/data";
-import { useEffect, useRef, useState } from "react";
-import TestimonialCard from "./TestimonialCard";
-import { motion, useInView } from "framer-motion";
 import { transitionDefaultConfig } from "@/constants/animations";
+import { TestimonialData } from "@/constants/data";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import TestimonialCard from "./TestimonialCard";
 
 const totalSlides = TestimonialData.length;
 
 const TestimonialCarousel = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
 
   const [currentSlide, setCurrentSlide] = useState(1);
 
@@ -26,12 +25,6 @@ const TestimonialCarousel = () => {
       setCurrentSlide(totalSlides - 1);
     } else setCurrentSlide(currentSlide - 1);
   };
-
-  // useEffect(() => {
-  //   if (isInView) {
-  //     setCurrentSlide(1);
-  //   }
-  // }, [isInView]);
 
   return (
     <div className="group relative my-6 mt-10 max-w-[60%] md:max-w-[calc(40%-2rem)]">
