@@ -16,7 +16,8 @@ function PricingTabs({ item }: { item: IPricingCard }) {
         {activeTab === "Monthly"
           ? item.pricePerUser?.monthly
           : item.pricePerUser?.annually}{" "}
-        per month
+        per user
+        <span className="block text-sm font-normal opacity-80 mt-1">monthly</span>
       </p>
 
       <p>Best for {item.team} users</p>

@@ -8,6 +8,7 @@ const Contact = () => {
         <SectionTitle
           heading={HEADING.H2}
           title="Simplify how your team works today."
+          
           accentBg
           hasButton
         />

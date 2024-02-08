@@ -1,5 +1,6 @@
 "use client";
 
+import { NavList } from "@/constants/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -23,7 +24,7 @@ const container = {
     width: "100%",
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -31,7 +32,7 @@ const container = {
 const navItem = {
   hidden: {
     opacity: 0,
-    y: -200,
+    y: -100,
   },
   show: {
     opacity: 1,
@@ -53,7 +54,7 @@ const MobileMenuDrawer = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 top-14 z-20 bg-black/60 md:hidden" />
+        <div className="fixed inset-0 top-14 z-20 bg-black/70 md:hidden" />
       )}
       <motion.div
         variants={drawer}
@@ -64,41 +65,27 @@ const MobileMenuDrawer = ({
           bounce: 0,
           duration: 0.4,
         }}
-        className="font-secondary to-accent-400 fixed inset-0 top-14 z-20 flex flex-col overflow-hidden bg-gradient-to-br from-primary-brightRed text-zinc-200 md:hidden"
+        className="font-secondary to-accent-400 fixed inset-0 top-14 z-20 flex flex-col overflow-hidden bg-gradient-to-br from-primary-brightRed md:hidden"
       >
-        <div className="container mx-auto my-10 mt-48 flex max-w-7xl flex-1 flex-col justify-between px-4">
-          <motion.ul
-            variants={container}
-            initial="hidden"
-            animate={isOpen ? "show" : "hidden"}
-            className="space-y-16"
-          >
-            {MenuList.map((item) => (
-              <motion.li
-                variants={navItem}
-                key={item.id}
-                onClick={closeMenu}
-                className="border-b border-zinc-100/50 pb-16"
-              >
-                <Link
-                  href={item.url}
-                  className="text-4xl font-black uppercase sm:text-6xl"
-                >
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          animate={isOpen ? "show" : "hidden"}
+          className="mt-10 px-8"
+        >
+          {NavList.map((item) => (
+            <motion.li variants={navItem} key={item.id} onClick={closeMenu} className="group">
+              <Link href={item.url}>
+                <div className="border-b border-zinc-100/50 py-10 text-3xl font-bold uppercase text-zinc-100 group-hover:text-zinc-300">
                   {item.label}
-                </Link>
-              </motion.li>
-            ))}
-          </motion.ul>
-        </div>
+                </div>
+              </Link>
+            </motion.li>
+          ))}
+        </motion.ul>
       </motion.div>
     </>
   );
 };
-
-const MenuList = [
-  { id: 0, label: "Blog", url: "/" },
-  { id: 1, label: "All posts", url: "/" },
-  { id: 2, label: "Links", url: "/" },
-];
 
 export default MobileMenuDrawer;

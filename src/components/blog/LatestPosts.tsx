@@ -18,7 +18,7 @@ const LatestPosts = async () => {
               className="group border-b border-zinc-400 py-6 last:border-none"
             >
               <Link href="/blog">
-                <h4 className="text-2xl font-bold transition group-hover:text-neutral-brightRed">
+                <h4 className="text-2xl font-bold transition group-hover:text-red-400">
                   {post.title}
                 </h4>
                 <p className="mt-2 opacity-80">{post.description}</p>

@@ -173,8 +173,8 @@ export const PricingData = [
       "Admin roles",
     ],
     pricePerUser: {
-      monthly: 8,
-      annually: 10,
+      monthly: 10,
+      annually: 8,
     },
     team: "1-50",
   },
