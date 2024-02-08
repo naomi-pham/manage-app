@@ -2,7 +2,7 @@
 
 import { NavList } from "@/constants/data";
 import useWindowSize from "@/hooks/useWindowSize";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -23,8 +23,14 @@ const Header = () => {
 
   const { scrollYProgress } = useScroll();
 
-  const y = useTransform(scrollYProgress, [0, 0.1, 1], [0, -200, 0]);
-  const stringY = useSpring(y, springConfig);
+  const boxShadow = useTransform(
+    scrollYProgress,
+    [0, 0.2],
+    [
+      "none",
+      "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+    ],
+  );
 
   const toggleMenu = () => {
     setIsOpen((prevOpen) => !prevOpen);
@@ -50,9 +56,9 @@ const Header = () => {
 
   return (
     <>
-      <motion.div
-        style={{ y: stringY }}
-        className="sticky top-0 z-30 bg-white/90 shadow-md backdrop-blur-3xl"
+      <motion.header
+        style={{ boxShadow }}
+        className="sticky top-0 z-30 bg-white/90 backdrop-blur-3xl"
       >
         <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/">
@@ -82,7 +88,7 @@ const Header = () => {
 
           <MobileMenuToggle isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
-      </motion.div>
+      </motion.header>
       {isOpen && <MobileMenuDrawer isOpen={isOpen} closeMenu={closeMenu} />}
     </>
   );
