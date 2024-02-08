@@ -7,7 +7,7 @@ import {
 import { HEADING } from "@/constants/interfaces";
 import { MotionConfig, motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import NavigateToPage from "../../common/NavigateToPage";
+import NavigateToPage from "../../common/navigation/NavigateToPage";
 
 const SectionTitle = ({
   heading,

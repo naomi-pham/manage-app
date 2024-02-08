@@ -1,4 +1,4 @@
-import NavigateToPage from "../common/NavigateToPage";
+import NavigateToPage from "../common/navigation/NavigateToPage";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 
 const Testimonials = () => {

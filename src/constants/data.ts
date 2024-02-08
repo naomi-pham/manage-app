@@ -167,7 +167,6 @@ export const PricingData = [
   {
     id: 1,
     title: PRICING_TIER.STANDARD,
-    desc: "Free for everyone",
     features: [
       "Unlimited issues and file uploads",
       "Guest accounts, private teams",
@@ -182,7 +181,6 @@ export const PricingData = [
   {
     id: 2,
     title: PRICING_TIER.PLUS,
-    desc: "Free for everyone",
     features: [
       "SAML / Single Sign On",
       "Advanced authentication controls",
@@ -192,6 +190,7 @@ export const PricingData = [
       "Priority support",
     ],
     pricePerUser: {
+      monthly: 14,
       annually: 14,
     },
     team: "50+",

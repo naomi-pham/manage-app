@@ -6,15 +6,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import NavigateToPage from "../../NavigateToPage";
+import NavigateToPage from "../../navigation/NavigateToPage";
 import MobileMenuDrawer from "./MobileMenuDrawer";
 import MobileMenuToggle from "./MobileMenuToggle";
-
-const springConfig = {
-  stiffness: 200,
-  damping: 30,
-  restDelta: 0,
-};
 
 const Header = () => {
   const { width: windowWidth } = useWindowSize();
