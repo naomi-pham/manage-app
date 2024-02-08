@@ -3,7 +3,7 @@ import Contact from "@/components/landing/Contact";
 import Services from "@/components/landing/Services";
 import Testimonials from "@/components/landing/Testimonials";
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <>
       <Banner />

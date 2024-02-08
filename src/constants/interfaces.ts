@@ -60,8 +60,6 @@ export const FIELD_TYPE = {
   TEXT_AREA: "FormTextArea",
 };
 
-
-
 export interface FormInput {
   __typename: string;
   name: string;
@@ -83,4 +81,24 @@ export interface FormTextArea {
 export interface IContactForm {
   title: string;
   fields?: (FormInput | FormTextArea)[];
+}
+
+export interface ISolution {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+}
+
+export interface INavDropdown {
+  id: string;
+  navDropdown?: (IPost | ISolution)[];
+}
+
+export interface INavbar {
+  id: string;
+  name: string;
+  slug: string;
+  position: number;
+  navDropdown?: INavDropdown;
 }

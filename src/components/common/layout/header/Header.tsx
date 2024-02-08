@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 import MobileMenuDrawer from "./MobileMenuDrawer";
 import PrimaryNav from "./PrimaryNav";
 import SecondaryNav from "./SecondaryNav";
+import { INavbar } from "@/constants/interfaces";
 
-const Header = () => {
+const Header = ({ navList }: { navList: INavbar[] }) => {
   const { width: windowWidth } = useWindowSize();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header = () => {
   return (
     <>
       <SecondaryNav />
-      <PrimaryNav isOpen={isOpen} toggleMenu={toggleMenu} />
+      <PrimaryNav isOpen={isOpen} toggleMenu={toggleMenu} navList={navList} />
 
       {isOpen && <MobileMenuDrawer isOpen={isOpen} closeMenu={closeMenu} />}
     </>

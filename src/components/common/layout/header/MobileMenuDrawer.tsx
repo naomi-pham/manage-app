@@ -1,6 +1,4 @@
-"use client";
-
-import { NavList } from "@/constants/data";
+import { NavData } from "@/constants/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -73,8 +71,13 @@ const MobileMenuDrawer = ({
           animate={isOpen ? "show" : "hidden"}
           className="mt-10 px-8"
         >
-          {NavList.map((item) => (
-            <motion.li variants={navItem} key={item.id} onClick={closeMenu} className="group">
+          {NavData.map((item) => (
+            <motion.li
+              variants={navItem}
+              key={item.id}
+              onClick={closeMenu}
+              className="group"
+            >
               <Link href={item.url}>
                 <div className="border-b border-zinc-100/50 py-10 text-3xl font-bold uppercase text-zinc-100 group-hover:text-zinc-300">
                   {item.label}

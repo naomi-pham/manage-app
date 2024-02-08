@@ -1,6 +1,6 @@
 import { PRICING_TIER } from "./interfaces";
 
-export const NavList = [
+export const NavData = [
   {
     id: 0,
     label: "Pricing",
@@ -8,8 +8,25 @@ export const NavList = [
   },
   {
     id: 1,
-    label: "Products",
-    url: "/products",
+    label: "Solutions",
+    url: "/solutions",
+    dropdown: [
+      {
+        id: 0,
+        title: "Engineer",
+        description: "Engineer",
+      },
+      {
+        id: 0,
+        title: "Design",
+        description: "Engineer",
+      },
+      {
+        id: 0,
+        title: "Product development",
+        description: "Engineer",
+      },
+    ],
   },
   {
     id: 2,
@@ -91,8 +108,8 @@ export const FooterLinks = {
     },
     {
       id: 2,
-      label: "Products",
-      url: "/products",
+      label: "Solutions",
+      url: "/solutions",
     },
     {
       id: 3,
