@@ -54,7 +54,7 @@ const MobileMenuDrawer = ({
       {isOpen && (
         <div className="fixed inset-0 top-14 z-20 bg-black/70 md:hidden" />
       )}
-      <motion.div
+      <motion.nav
         variants={drawer}
         initial="close"
         animate={isOpen ? "open" : "close"}
@@ -78,15 +78,15 @@ const MobileMenuDrawer = ({
               onClick={closeMenu}
               className="group"
             >
-              <Link href={item.url}>
+              <Link href={item.slug}>
                 <div className="border-b border-zinc-100/50 py-10 text-3xl font-bold uppercase text-zinc-100 group-hover:text-zinc-300">
-                  {item.label}
+                  {item.title}
                 </div>
               </Link>
             </motion.li>
           ))}
         </motion.ul>
-      </motion.div>
+      </motion.nav>
     </>
   );
 };

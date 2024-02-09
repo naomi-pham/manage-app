@@ -29,7 +29,7 @@ const SectionTitle = ({
     <MotionConfig transition={transitionDefaultConfig}>
       <div
         ref={ref}
-        className={`flex gap-6 text-center md:text-left ${accentBg ? "w-full flex-row items-center justify-between text-white" : "flex-col"}`}
+        className={`flex gap-x-10 gap-y-6 text-center md:text-left ${accentBg ? "w-full flex-wrap justify-center items-center md:justify-between text-white" : "flex-col"}`}
       >
         <div className="space-y-6">
           {heading === HEADING.H1 ? (

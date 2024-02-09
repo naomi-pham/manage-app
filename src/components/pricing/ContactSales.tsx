@@ -3,20 +3,17 @@ import Button from "../common/Button";
 
 const ContactSales = () => {
   return (
-    <section className="container mx-auto my-40 max-w-7xl px-6">
-      <div className="mx-auto flex max-w-3xl items-center justify-between gap-6 rounded-2xl bg-neutral-lightGray p-10">
-        <div className="space-y-4">
+    <section className="container mx-auto my-32 max-w-7xl px-6">
+      <div className="mx-auto grid max-w-3xl grid-cols-1 items-center gap-6 rounded-2xl bg-neutral-lightGray p-10 sm:grid-cols-3">
+        <div className="space-y-4 sm:col-span-2">
           <h3 className="text-2xl font-bold">Manage Enterprise</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptatibus, quo. Recusandae at commodi deleniti doloremque minus
-            veritatis dicta nam temporibus illo rerum. Modi ullam ex iste eos
-            aliquam nesciunt architecto.
+            veritatis.
           </p>
         </div>
-        <div className="flex w-full min-w-fit justify-end">
-          <Button shadow='none'>Contact sale</Button>
-        </div>
+        <Button size="medium">Contact sale</Button>
       </div>
     </section>
   );

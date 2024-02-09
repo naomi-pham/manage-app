@@ -4,7 +4,7 @@ import SectionTitle from "./components/SectionTitle";
 
 const Banner = () => {
   return (
-    <section className="container mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-between gap-10 px-6 text-center md:flex-row md:text-left">
+    <section className="container mx-auto mt-20 flex max-w-7xl flex-col-reverse items-center justify-between gap-10 px-6 text-center md:flex-row md:text-left overflow-hidden">
       <SectionTitle
         heading={HEADING.H1}
         title="Bring everyone together to build better products."

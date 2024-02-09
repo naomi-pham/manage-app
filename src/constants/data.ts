@@ -3,26 +3,29 @@ import { PRICING_TIER } from "./interfaces";
 export const NavData = [
   {
     id: 0,
-    label: "Pricing",
-    url: "/pricing",
+    title: "Pricing",
+    slug: "/pricing",
   },
   {
     id: 1,
-    label: "Solutions",
-    url: "/solutions",
+    title: "Solutions",
+    slug: "/solutions",
     dropdown: [
       {
         id: 0,
+        slug: "/",
         title: "Engineer",
         description: "Engineer",
       },
       {
-        id: 0,
+        id: 1,
+        slug: "/",
         title: "Design",
         description: "Engineer",
       },
       {
-        id: 0,
+        id: 2,
+        slug: "/",
         title: "Product development",
         description: "Engineer",
       },
@@ -30,18 +33,18 @@ export const NavData = [
   },
   {
     id: 2,
-    label: "About Us",
-    url: "/about-us",
+    title: "About Us",
+    slug: "/about-us",
   },
   {
     id: 3,
-    label: "Careers",
-    url: "/careers",
+    title: "Careers",
+    slug: "/careers",
   },
   {
     id: 4,
-    label: "Blog",
-    url: "/blog",
+    title: "Blog",
+    slug: "/blog",
   },
 ];
 

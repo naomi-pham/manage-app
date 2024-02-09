@@ -29,6 +29,7 @@ const SectionImage = ({
       animate={isInView ? "visible" : "hidden"}
       transition={transitionDefaultConfig}
       variants={fadeRightVariants}
+      
     >
       <Image src={src} alt={alt} width={width} height={height} />
     </motion.div>

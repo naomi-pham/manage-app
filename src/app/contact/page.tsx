@@ -1,17 +1,16 @@
-import FormFields from "@/components/contact/FormFields";
+import ContactForm from "@/components/contact/ContactForm";
 
 const ContactPage = () => {
   return (
     <div className="mb-24 mt-10 space-y-16 md:mt-16">
-      <div className="mx-auto max-w-xl space-y-6 text-center">
+      <div className="container mx-auto mt-10 flex max-w-3xl flex-col justify-center gap-6 px-6 text-center md:mt-16">
         <h1 className="text-5xl font-bold">How can we help?</h1>
         <p className="text-xl">
-          Use Manage for free with your whole team. Upgrade to enable unlimited
-          issues, enhanced security controls, and additional features.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum
+          eligendi voluptas eum voluptates facilis.
         </p>
       </div>
-      {/* <ContactForm /> */}
-      <FormFields />
+      <ContactForm />
     </div>
   );
 };

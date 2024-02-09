@@ -18,22 +18,13 @@ const button = cva(
       size: {
         small: "text-sm py-1 px-2",
         medium: "text-sm py-2.5 px-6",
-        large: "text-sm py-3 px-8",
-
-      },
-      shadow: {
-        primary:
-          "shadow-primary-brightRed/40 hover:text-neutral-paleRed hover:shadow-none",
-        secondary:
-          "hover:shadow-white/20 hover:text-primary-brightRed/60",
-        none: "shadow-none",
+        large: "py-2.5 px-7",
       },
     },
     compoundVariants: [{ intent: "primary", size: "medium" }],
     defaultVariants: {
       intent: "primary",
       size: "large",
-      shadow: "primary",
     },
   },
 );
@@ -46,10 +37,7 @@ const Button: React.FC<ButtonProps> = ({
   className,
   intent,
   size,
-  shadow,
   ...props
-}) => (
-  <button className={button({ intent, size, shadow, className })} {...props} />
-);
+}) => <button className={button({ intent, size, className })} {...props} />;
 
 export default Button;

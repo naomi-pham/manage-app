@@ -2,7 +2,7 @@ import { INavbar } from "@/constants/interfaces";
 import { HYGRAPH_CLIENT } from "./hygraphClient";
 
 const getNavList = async () => {
-  const { navbars } = await HYGRAPH_CLIENT.request<{
+  const { navbars: navList } = await HYGRAPH_CLIENT.request<{
     navbars: INavbar[];
   }>(
     `query Navbar() { 
@@ -26,7 +26,7 @@ const getNavList = async () => {
     }`,
   );
 
-  return navbars;
+  return navList;
 };
 
 export default getNavList;

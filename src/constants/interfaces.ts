@@ -84,7 +84,7 @@ export interface IContactForm {
 }
 
 export interface ISolution {
-  id: string;
+  id: string | number;
   title: string;
   slug: string;
   description: string;
@@ -95,10 +95,9 @@ export interface INavDropdown {
   navDropdown?: (IPost | ISolution)[];
 }
 
-export interface INavbar {
+export interface INavItem {
   id: string;
-  name: string;
+  title: string;
   slug: string;
-  position: number;
-  navDropdown?: INavDropdown;
+  dropdown?: INavDropdown;
 }

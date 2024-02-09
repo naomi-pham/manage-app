@@ -20,7 +20,7 @@ const Footer = () => {
           </Link>
           <IconList />
         </div>
-        <div className="order-2 mx-auto inline-flex w-10/12 lg:w-4/12 lg:text-base justify-between text-lg md:w-5/12">
+        <div className="order-2 mx-auto inline-flex gap-6 w-10/12 lg:w-4/12 lg:text-base justify-between text-lg md:w-5/12">
           <ul className="space-y-4">
             {FooterLinks.left.map((item) => (
               <li key={item.id}>

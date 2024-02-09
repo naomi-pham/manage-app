@@ -25,7 +25,7 @@ const FeaturedPost = async () => {
         </h1>
         <div className="flex flex-col items-start justify-between gap-y-4">
           <p className="text-lg opacity-60">{latestPost?.description}</p>
-          <Button shadow="none">Read more</Button>
+          <Button size="medium">Read more</Button>
         </div>
       </div>
     </div>

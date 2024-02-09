@@ -14,7 +14,7 @@ const IconList = () => {
               alt={item.label}
               width={20}
               height={20}
-              className="min-w-[40px] md:min-w-[20px]"
+              className="min-w-[32px] sm:min-w-[40px] md:min-w-[20px]"
             />
           </Link>
         </li>

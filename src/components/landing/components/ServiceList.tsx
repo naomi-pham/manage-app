@@ -16,7 +16,7 @@ const ServiceList = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={staggerParent}
-      className="flex flex-col gap-10 md:max-w-md lg:max-w-2xl"
+      className="flex flex-col gap-10 md:max-w-md lg:max-w-2xl overflow-hidden"
     >
       {ServiceData.map((item) => (
         <motion.li key={item.id} variants={staggerChild}>
