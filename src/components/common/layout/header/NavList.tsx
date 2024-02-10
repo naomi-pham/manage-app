@@ -28,7 +28,7 @@ const NavList = () => {
 
             {item?.dropdown ? (
               <>
-                <div className="absolute top-10 hidden h-fit w-[100px] bg-transparent p-10 group-hover:block"></div>
+                <div className="absolute top-12 hidden h-fit w-[100px] bg-transparent p-10 group-hover:block"></div>
                 <div className="absolute inset-0 top-[76px] mx-auto hidden h-fit bg-neutral-brightRed px-6 py-12 group-hover:block">
                   <div className="container mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6">
                     {item.dropdown?.map((item) => (

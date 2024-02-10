@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${beVietnamPro.className} bg-white leading-7 text-neutral-darkBlue`}
+        className={`${beVietnamPro.className} bg-white leading-7 text-zinc-700`}
       >
         <MainLayout>{children}</MainLayout>
       </body>
