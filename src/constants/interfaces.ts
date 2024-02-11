@@ -7,7 +7,7 @@ export interface IServiceCard {
 export interface ITestimonialCard {
   id: number;
   author: string;
-  content: string;
+  content?: string;
   avatar: string;
 }
 
@@ -100,4 +100,11 @@ export interface INavItem {
   title: string;
   slug: string;
   dropdown?: INavDropdown;
+}
+
+export interface ITeam {
+  id: number;
+  avatar: string;
+  name: string;
+  position: string;
 }

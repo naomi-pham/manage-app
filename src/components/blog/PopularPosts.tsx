@@ -31,7 +31,7 @@ const PopularPosts = async () => {
                     <h4 className="line-clamp-1 text-2xl font-bold opacity-80 transition group-hover:text-primary-brightRed">
                       {post?.title}
                     </h4>
-                    <p className="opacity-60">{post?.description}</p>
+                    <p className="text-neutral-darkBlue/60">{post?.description}</p>
                   </div>
                 </div>
               </Link>

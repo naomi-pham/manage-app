@@ -20,11 +20,16 @@ const button = cva(
         medium: "text-sm py-2.5 px-6",
         large: "py-2.5 px-7",
       },
+      width: {
+        fit: "w-fit",
+        full: "w-full",
+      },
     },
     compoundVariants: [{ intent: "primary", size: "medium" }],
     defaultVariants: {
       intent: "primary",
       size: "large",
+      width: "fit",
     },
   },
 );
@@ -37,7 +42,10 @@ const Button: React.FC<ButtonProps> = ({
   className,
   intent,
   size,
+  width,
   ...props
-}) => <button className={button({ intent, size, className })} {...props} />;
+}) => (
+  <button className={button({ intent, size, width, className })} {...props} />
+);
 
 export default Button;

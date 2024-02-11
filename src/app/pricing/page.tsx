@@ -1,16 +1,15 @@
+import PageTitle from "@/components/common/typography/PageTitle";
 import ContactSales from "@/components/pricing/ContactSales";
 import PricingList from "@/components/pricing/PricingList";
 
 const PricingPage = () => {
   return (
     <>
-      <div className="mx-auto gap-6 mt-10 md:mt-16 flex container px-6 max-w-3xl flex-col justify-center text-center">
-        <h1 className="text-5xl font-bold">Pricing</h1>
-        <p className="text-2xl text-zinc-600 leading-normal">
-          Use Manage for free with your whole team. Upgrade to enable unlimited
-          issues, enhanced security controls, and additional features.
-        </p>
-      </div>
+      <PageTitle
+        title="Pricing"
+        desc="Use Manage for free with your whole team. Upgrade to enable unlimited
+        issues, enhanced security controls, and additional features."
+      />
       <PricingList />
       <ContactSales />
     </>

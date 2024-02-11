@@ -14,10 +14,10 @@ export default {
           darkBlue: "#0d2857",
         },
         neutral: {
-          grayishBlue: "#4a7b99",
+          grayishBlue: "#eaf0f6",
           brightRed: "#FEF4EA",
           darkBlue: "#192733",
-          paleRed: "#fce8e8",
+          paleRed: "#fef4ea",
           lightGray: "#fafafa",
         },
       },

@@ -49,7 +49,7 @@ export const NavDropdownItem = ({ item }: { item: IPost | ISolution }) => {
   return (
     <Link
       href={item.slug}
-      className="rounded-lg bg-white p-4 transition duration-200 hover:scale-[102%] hover:bg-[#eaf0f6]"
+      className="rounded-lg bg-white p-4 transition duration-200 hover:scale-[102%] hover:bg-neutral-grayishBlue"
     >
       <h4 className="mb-1 text-lg font-bold">{item.title}</h4>
       <p className="line-clamp-2">{item.description}</p>

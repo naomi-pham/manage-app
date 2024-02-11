@@ -71,7 +71,7 @@ export const TestimonialData = [
     id: 0,
     avatar: "/landing/avatar-anisha.png",
     author: "Anisha Li",
-    content:
+    linkedIn:
       "Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.",
   },
   {
@@ -214,5 +214,44 @@ export const PricingData = [
       annually: 14,
     },
     team: "50+",
+  },
+];
+
+export const TeamData = [
+  {
+    id: 0,
+    avatar: "/landing/avatar-anisha.png",
+    name: "Anisha Li",
+    position: "CEO",
+  },
+  {
+    id: 1,
+    avatar: "/landing/avatar-ali.png",
+    name: "Ali Bravo",
+    position: "web developer",
+  },
+  {
+    id: 2,
+    avatar: "/landing/avatar-richard.png",
+    name: "Richard Watts",
+    position: "web developer",
+  },
+  {
+    id: 3,
+    avatar: "/landing/avatar-shanai.png",
+    name: "Shanai Gough",
+    position: "mobile developer",
+  },
+  {
+    id: 4,
+    avatar: "/landing/avatar-anisha.png",
+    name: "Anisha Li",
+    position: "Business analyst",
+  },
+  {
+    id: 5,
+    avatar: "/landing/avatar-ali.png",
+    name: "Ali Bravo",
+    position: "Developer advocate",
   },
 ];

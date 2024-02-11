@@ -54,7 +54,6 @@ const PricingCard = ({ item }: { item: IPricingCard }) => {
           intent={
             item.title === PRICING_TIER.STANDARD ? "secondary" : "primary"
           }
-          shadow="none"
         >
           Get started with {item.title}
         </Button>

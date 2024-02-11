@@ -7,13 +7,15 @@ const ContactSales = () => {
       <div className="mx-auto grid max-w-3xl grid-cols-1 items-center gap-6 rounded-2xl bg-neutral-lightGray p-10 sm:grid-cols-3">
         <div className="space-y-4 sm:col-span-2">
           <h3 className="text-2xl font-bold">Manage Enterprise</h3>
-          <p>
+          <p className="text-neutral-darkBlue/80">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptatibus, quo. Recusandae at commodi deleniti doloremque minus
             veritatis.
           </p>
         </div>
-        <Button size="medium">Contact sale</Button>
+        <div className="sm:justify-self-end">
+          <Button size="medium">Contact sale</Button>
+        </div>
       </div>
     </section>
   );
