@@ -22,7 +22,7 @@ const ContactForm = () => {
   };
 
   const handleSubmit = () => {
-    console.log(formValue);
+    // console.log(formValue);
   };
 
   return (

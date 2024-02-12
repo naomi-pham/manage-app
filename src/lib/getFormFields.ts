@@ -29,8 +29,6 @@ const getFormFields = async (slug: string) => {
     { slug: slug },
   );
 
-  console.log(form);
-
   return form;
 };
 

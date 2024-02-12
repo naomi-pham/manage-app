@@ -5,12 +5,14 @@ const TeamReviewCard = ({
   item,
   currentSlide,
 }: {
-  item: ITestimonialCard;
+  item: ITestimonialCard | undefined;
   currentSlide: number;
 }) => {
+  if (!item) return null;
+
   return (
-    <li
-      className={`relative mt-20 min-w-[100%] rounded-lg bg-neutral-lightGray p-6 ${currentSlide === item.id ? "scale-125 opacity-100" : "opacity-0"}`}
+    <div
+      className={`relative mt-20 min-w-full rounded-lg bg-neutral-lightGray p-6 ${currentSlide === item.id ? "opacity-100" : "opacity-0"}`}
     >
       <div className="absolute -top-10 left-1/2 -translate-x-1/2">
         <Image
@@ -21,11 +23,11 @@ const TeamReviewCard = ({
           className="max-w-20 object-cover"
         />
       </div>
-      <div className="mt-10 flex flex-col items-center gap-4 text-center">
+      <div className="mt-10 flex text-lg flex-col items-center gap-4 text-center">
         <h4 className="font-bold text-neutral-darkBlue/80">{item.author}</h4>
         <p className="line-clamp-4 text-primary-darkBlue/40">{item.content}</p>
       </div>
-    </li>
+    </div>
   );
 };
 

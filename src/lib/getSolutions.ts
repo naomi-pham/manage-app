@@ -15,7 +15,7 @@ const getSolutions = async () => {
     }`,
   );
 
-  console.log(solutions);
+  // console.log(solutions);
 
   return solutions;
 };

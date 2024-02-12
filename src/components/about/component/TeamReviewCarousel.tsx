@@ -1,9 +1,13 @@
 "use client";
 
 import { IconArrow } from "@/components/common/Icons";
-import { transitionDefaultConfig } from "@/constants/animations";
 import { TestimonialData } from "@/constants/data";
-import { motion, useInView } from "framer-motion";
+import {
+  AnimatePresence,
+  MotionConfig,
+  motion,
+  useInView,
+} from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import TeamReviewCard from "./TeamReviewCard";
 
@@ -14,17 +18,48 @@ const TeamReviewCarousel = () => {
   const isInView = useInView(ref, { once: true });
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const carouselVariants = {
+    enter: (direction: number) => ({
+      x: `${100 * direction}%`,
+      opacity: 0,
+      scale: 1.2,
+    }),
+    middle: { x: 0, opacity: 1, scale: 1 },
+    exit: (direction: number) => ({
+      x: `-${100 * direction}%`,
+      opacity: 0,
+      scale: 1,
+    }),
+  };
 
   const moveToRight = () => {
+    enableAnimation();
     if (currentSlide === totalSlides - 1) {
       setCurrentSlide(0);
-    } else setCurrentSlide(currentSlide + 1);
+    } else {
+      setCurrentSlide(currentSlide + 1);
+    }
+    setDirection(1);
   };
 
   const moveToLeft = () => {
+    enableAnimation();
     if (currentSlide === 0) {
       setCurrentSlide(totalSlides - 1);
     } else setCurrentSlide(currentSlide - 1);
+    setDirection(-1);
+  };
+
+  const cancelAnimation = () => {
+    setIsAnimating(false);
+  };
+
+  const enableAnimation = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
   };
 
   useEffect(() => {
@@ -34,43 +69,53 @@ const TeamReviewCarousel = () => {
   }, [isInView]);
 
   return (
-    <div className="group relative my-6 mt-10 max-w-[80%] mx-auto">
-      <div className="absolute -left-60 bottom-2 z-10 flex h-[calc(100%-4rem)] items-center justify-center">
+    <div className="group relative mx-auto my-6 mt-10 max-w-4xl">
+      <MotionConfig
+        transition={{ duration: 0.65, ease: [0.56, 0.03, 0.12, 1.04] }}
+      >
+        <div className="overflow-hidden">
+          <AnimatePresence
+            initial={false}
+            mode="popLayout"
+            custom={direction}
+            onExitComplete={cancelAnimation}
+          >
+            <motion.div
+              key={currentSlide}
+              variants={carouselVariants}
+              custom={direction}
+              animate="middle"
+              initial="enter"
+              exit="exit"
+              className="overflow-hidden"
+            >
+              <TeamReviewCard
+                currentSlide={currentSlide}
+                item={TestimonialData[currentSlide]}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </MotionConfig>
+
+      <div className="absolute bottom-2 left-0 z-10 flex h-[calc(100%-4rem)] items-center justify-center lg:-left-12">
         <button
           onClick={moveToLeft}
           type="button"
-          className="-rotate-180 text-primary-brightRed opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
-          disabled={currentSlide === 0}
+          className="-rotate-180 text-primary-brightRed opacity-10 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
         >
           <IconArrow size={40} />
         </button>
       </div>
-      <div className="absolute -right-60 bottom-2 z-10 flex h-[calc(100%-4rem)] items-center justify-center">
+      <div className="absolute bottom-2 right-0 z-10 flex h-[calc(100%-4rem)] items-center justify-center lg:-right-12">
         <button
           onClick={moveToRight}
           type="button"
           className="text-primary-brightRed opacity-0 disabled:text-neutral-darkBlue/10 group-hover:opacity-100"
-          disabled={currentSlide === totalSlides - 1}
         >
           <IconArrow size={40} />
         </button>
       </div>
-      <motion.ul
-        ref={ref}
-        animate={{
-          x: `calc(-${currentSlide * 100}% - ${currentSlide * 10}rem)`,
-        }}
-        transition={transitionDefaultConfig}
-        className="mb-8 flex flex-nowrap items-center gap-40"
-      >
-        {TestimonialData.map((item) => (
-          <TeamReviewCard
-            key={item.id}
-            item={item}
-            currentSlide={currentSlide}
-          />
-        ))}
-      </motion.ul>
     </div>
   );
 };

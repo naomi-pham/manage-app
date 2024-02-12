@@ -71,7 +71,7 @@ export const TestimonialData = [
     id: 0,
     avatar: "/landing/avatar-anisha.png",
     author: "Anisha Li",
-    linkedIn:
+    content:
       "Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.",
   },
   {

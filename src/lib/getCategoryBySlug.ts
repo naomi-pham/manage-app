@@ -27,7 +27,7 @@ const getCategoryBySlug = async (slug: string) => {
     { slug: slug },
   );
 
-  console.log(category);
+  // console.log(category);
 
   return category;
 };

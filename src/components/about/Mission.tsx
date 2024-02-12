@@ -6,7 +6,7 @@ const Mission = () => {
       <div className="container mx-auto mt-16 max-w-7xl px-6 py-16 md:mt-32">
         <div className="space-y-6">
           <SectionTitle title="Mission and vision" />
-          <div className="columns-2 gap-16 space-y-6 text-lg leading-relaxed">
+          <div className="md:columns-2 columns-1 gap-16 space-y-6 text-lg leading-relaxed">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
               soluta. Tempora sed deserunt praesentium ut mollitia molestias
