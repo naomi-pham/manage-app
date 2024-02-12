@@ -3,7 +3,7 @@ import SectionTitle from "./component/SectionTitle";
 
 const Introduction = () => {
   return (
-    <section className="container mx-auto mt-16 max-w-7xl px-6 py-10">
+    <section className="container mx-auto mt-20 max-w-7xl px-6">
       <div className="flex flex-col items-center justify-center gap-x-20 text-center md:flex-row md:justify-between md:text-left">
         <div className="flex aspect-video flex-1 items-center justify-center rounded-xl text-primary-brightRed">
           <IconTeam size={300} />

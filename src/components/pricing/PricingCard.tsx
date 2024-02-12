@@ -29,7 +29,7 @@ const PricingCard = ({ item }: { item: IPricingCard }) => {
         )}
       </div>
 
-      <div className="mt-10 flex flex-col justify-between gap-10">
+      <div className="mt-10 flex flex-col items-center justify-between gap-10">
         <div className="self-center">
           {item.title !== PRICING_TIER.FREE ? (
             <p>Everything in {renderPreviousPricingTier()}, plus...</p>
@@ -54,6 +54,7 @@ const PricingCard = ({ item }: { item: IPricingCard }) => {
           intent={
             item.title === PRICING_TIER.STANDARD ? "secondary" : "primary"
           }
+          width="full"
         >
           Get started with {item.title}
         </Button>
