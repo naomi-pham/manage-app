@@ -9,7 +9,7 @@ const Team = () => {
         <SectionTitle subtitle="Our members" title="Meet the team" />
       </div>
 
-      <ul className="flex flex-wrap gap-10 mt-16 items-center justify-between">
+      <ul className="flex flex-wrap gap-10 mt-16 items-center justify-center xl:justify-around">
         {TeamData.map((item) => (
           <TeamCard key={item.id} item={item} />
         ))}
